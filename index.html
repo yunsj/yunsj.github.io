@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>Web BLE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5" onload="checkBLE()">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-blue w3-left-align w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" title="News"><i class="fa fa-home w3-margin-right"></i>Web Bluetooth Low Energy</a>
+
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+
+
+<!-- Page Container -->
+<div class="w3-content" style="max-width:1400px;margin-top:50px;margin-bottom:100px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m6 w3-round">
+	
+		<div class="w3-container w3-margin w3-display-container w3-round w3-border w3-theme-border wl" id="checkCard">
+        <p><strong>Support</strong></p>
+        <p id="checkText">Checking BLE support...</p>
+      </div>
+	  <div class="w3-container w3-card w3-margin w3-display-container w3-blue-gray w3-round" onclick="location.href='./explorer/'">
+        <p><i class="fa fa-bluetooth"></i> <strong>Explorer</strong><p>
+        <p>Explore BLE services on a device</p>
+      </div>
+	  <div class="w3-container w3-card w3-margin w3-display-container w3-blue w3-round" onclick="location.href='./clock/'">
+        <p><i class="fa fa-clock-o"></i> <strong>Clock</strong></p>
+        <p>Connect to an ESP32 based clock</p>
+      </div>
+	  <div class="w3-container w3-card w3-margin w3-display-container w3-blue w3-round" onclick="location.href='./lights/'">
+        <p><i class="fa fa-lightbulb-o"></i> <strong>Lights</strong></p>
+        <p>Connect to an ESP32 based lighting system</p>
+      </div>
+	  <div class="w3-container w3-card w3-margin w3-display-container w3-blue w3-round" onclick="location.href='./logger/'">
+        <p><i class="fa fa-list"></i> <strong>Logger</strong></p>
+        <p>View logs via BLE</p>
+      </div>
+	  <div class="w3-container w3-card w3-margin w3-display-container w3-blue-gray w3-round" onclick="location.href='./ota/'">
+        <p><i class="fa fa-upload"></i> <strong>OTA</strong></p>
+        <p>OTA update via BLE</p>
+      </div>
+	  
+      
+      
+
+    <!-- End Left Column -->
+    </div>
+    <div class="w3-col m6 w3-round">
+      <div class="w3-container w3-card w3-margin w3-display-container w3-brown w3-round" onclick="location.href='https://github.com/fbiego/fbiego.github.io'">
+        <p><i class="fa fa-github"></i> <strong>Github</strong></p>
+        <p>Github Repository</p>
+      </div>
+      
+	  <!-- Accordion -->
+      <div class="w3-round w3-white w3-margin">
+		<div class="w3-container">
+		<h4 class="w3-text-teal">Enable Web BLE</h4>
+      <p>Enable #experimental-web-platform-features flags<br>
+	  <a href="#">about://flags</a><br>
+	  
+	  <h4>Bluetooth Internals</h4>
+	  <a href="#">about://bluetooth-internals</a><br>
+	  
+	  </p>
+    
+        </div>      
+      </div>
+      
+      
+      <!-- Alert Box -->
+      <div class="w3-container w3-margin w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border wl">
+		<div class="w3-display-topright">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-blue">
+				<i class="fa fa-copy"></i>
+			</span>
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-red">
+				<i class="fa fa-remove"></i>
+			</span>
+		</div>
+        <p><strong>Notifications</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.:</p>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+<script src="main.js"></script>
+
+<footer class="w3-container w3-indigo w3-bottom">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ 
+
+</body>
+</html> 
