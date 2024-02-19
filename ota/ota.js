@@ -18,7 +18,7 @@ const rx_uuid = 'fb1e4003-54ae-4a28-9f74-dfccb248601d';
 //const PART = 16000;
 const PART = 16384;
 
-const MTU = 500;
+const MTU = 502;
 
 var otaRX, otaTX;
 var otaData = new Uint8Array();
