@@ -23,11 +23,13 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-bluetooth w3-margin-right"></i>ESP BLE OTA</a>
 
  </div>
+	<!--
  <div id="navDemo" class="w3-bar-block w3-blue w3-opacity-min w3-hide w3-hide-large w3-hide-medium w3-large">
 	<a href="../clock/" class="w3-bar-item w3-button w3-padding-large">Clock</a>
 	<a href="../explorer/" class="w3-bar-item w3-button w3-padding-large">Explorer</a>
 	<a href="../lights/" class="w3-bar-item w3-button w3-padding-large">ESP Lights</a>
  </div>
+	-->
 </div>
 
 <!-- Navbar on small screens -->
@@ -42,11 +44,11 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="w3-round w3-white w3-margin">
         <div class="w3-container">
          <!-- <h4>Paired Devices</h4> -->
-	 <h4>장치 연결</h4>	
+	 <h4>페어된 장치</h4>	
          <ul class="w3-ul w3-hoverable w3-border w3-round" id="deviceList">
 		 </ul>
-		 <button type="button" id="scanButton" class="w3-button w3-round w3-margin w3-text-white w3-blue">Connect</button>
-		 <button type="button" id="disconnectButton" class="w3-button w3-round w3-margin w3-text-white w3-red w3-hide">Disconnect</button>
+		 <button type="button" id="scanButton" class="w3-button w3-round w3-margin w3-text-white w3-blue">찾기</button> <!-- Connect -->
+		 <button type="button" id="disconnectButton" class="w3-button w3-round w3-margin w3-text-white w3-red w3-hide">해제</button> <!-- Disconnect -->
         </div>
       </div>
       <br>
@@ -58,7 +60,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 		<div class="w3-light-grey w3-round">
 			<div class="w3-container w3-round w3-blue" id="progressBar" style="width:0%">%</div>
 		</div>
-		<button type="button" id="uploadButton" class="w3-button w3-round w3-margin w3-text-white w3-blue w3-hide">Upload</button>
+		<button type="button" id="uploadButton" class="w3-button w3-round w3-margin w3-text-white w3-blue w3-hide">펌웨어 업로드</button> <!-- Upload -->
         
         </div>      
       </div>
@@ -69,7 +71,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <!-- Profile -->
 	  
 	  <div class="w3-container w3-margin w3-display-container w3-round w3-border w3-theme-border wl" id="outputCard">
-        <p><strong>Info</strong></p>
+        <p><strong>BLE 상태</strong></p> <!-- Info -->
         <p id="outputText">Connect a BLE device</p>
       </div>
 	  <br>
@@ -85,7 +87,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 				<i class="fa fa-remove"></i>
 			</span>
 		</div>
-        <p><strong>Notifications</strong></p>
+        <p><strong>알림창</strong></p> <!-- Info -->
         <p id="notifyLogs"></p>
       </div>
     
