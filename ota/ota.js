@@ -133,9 +133,14 @@ async function sendPart(pos){
     await otaTX.writeValue(send);
     //logs.innerText += '\n[' + toHexString(send)+ ']';
   }
+  
   if ((end-start)%MTU != 0){
     var rem = (end-start)%MTU;
-    var toSend = [0xFB, parts];
+    //var toSend = [0xFB, parts];
+    //for (let y = 0; y < rem; y++){
+    //  toSend.push(otaData[(pos*PART)+(MTU*parts)+y])
+    //}
+    var toSend = [0xFB, parts+1];
     for (let y = 0; y < rem; y++){
       toSend.push(otaData[(pos*PART)+(MTU*parts)+y])
     }
