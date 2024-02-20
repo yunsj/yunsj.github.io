@@ -1,4 +1,4 @@
 # yahad.github.io
-Trying out Web BLE API
+"YAHAD Battery" Web BLE OTA
 
 [`yahad.github.io`](https://yahad.github.io/)
