@@ -11,4 +11,4 @@
 - KC 인증 문의.
 - BMS, 기타 개발 문의는 아래에서 문의주세요.
 
-[`야하드배터리`](yahad.modoo.at)
+[`야하드배터리`](https://yahad.modoo.at)
