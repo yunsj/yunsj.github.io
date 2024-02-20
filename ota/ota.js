@@ -106,6 +106,12 @@ async function handleNotifications(event){
       await sendPart(next);
     break;
     case 0xF2: //complete, installing firmware
+      
+      var next = value.getUint8(1)*256 + value.getUint8(2);
+      let pr = Math.trunc((next/fileParts)*100) + '%';
+      progressBar.style.width = pr;
+      progressBar.innerText = pr;
+      
       textAlert.textContent = 'Transfer Complete';
     break;
     case 0x0F: //ota result
