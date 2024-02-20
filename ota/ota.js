@@ -107,10 +107,8 @@ async function handleNotifications(event){
     break;
     case 0xF2: //complete, installing firmware
       
-      var next = value.getUint8(1)*256 + value.getUint8(2);
-      let pr = Math.trunc((next/fileParts)*100) + '%';
-      progressBar.style.width = pr;
-      progressBar.innerText = pr;
+      progressBar.style.width = '100%';
+      progressBar.innerText = '100%';
       
       textAlert.textContent = 'Transfer Complete';
     break;
