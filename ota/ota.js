@@ -101,8 +101,15 @@ async function handleNotifications(event){
     case 0xF1: //next part
       var next = value.getUint8(1)*256 + value.getUint8(2);
       let pr = Math.trunc((next/fileParts)*100) + '%';
-      progressBar.style.width = pr;
-      progressBar.innerText = pr;
+
+      if ((next/fileParts) < 0.97) {
+        progressBar.style.width = pr;
+        progressBar.innerText = pr;
+      }
+      else {
+        progressBar.style.width = '100%';
+        progressBar.innerText = '100%';
+      }
       await sendPart(next);
     break;
     case 0xF2: //complete, installing firmware
