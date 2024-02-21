@@ -10,9 +10,13 @@ let fileSelector = document.querySelector('#otaFile');
 let uploadButton = document.querySelector('#uploadButton');
 let progressBar = document.querySelector('#progressBar');
 
-const service_uuid = 'fb1e4001-54ae-4a28-9f74-dfccb248601d';
-const tx_uuid = 'fb1e4002-54ae-4a28-9f74-dfccb248601d';
-const rx_uuid = 'fb1e4003-54ae-4a28-9f74-dfccb248601d';
+const service_uuid =  "0000FFF0-0000-1000-8000-00805F9B34FB"
+const tx_uuid =       "0000FFF2-0000-1000-8000-00805F9B34FB"
+const rx_uuid =       "0000FFF1-0000-1000-8000-00805F9B34FB"
+
+//const service_uuid = 'fb1e4001-54ae-4a28-9f74-dfccb248601d';
+//const tx_uuid = 'fb1e4002-54ae-4a28-9f74-dfccb248601d';
+//const rx_uuid = 'fb1e4003-54ae-4a28-9f74-dfccb248601d';
 
 const PART = 16000;
 //const PART = 16384;
