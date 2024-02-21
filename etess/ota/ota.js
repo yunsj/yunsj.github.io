@@ -10,7 +10,7 @@ let fileSelector = document.querySelector('#otaFile');
 let uploadButton = document.querySelector('#uploadButton');
 let progressBar = document.querySelector('#progressBar');
 
-const service_uuid =  '0000FFF0-0000-1000-8000-00805F9B34FB';
+const service_uuid =  '0000FFF3-0000-1000-8000-00805F9B34FB';
 const tx_uuid =       '0000FFF2-0000-1000-8000-00805F9B34FB';
 const rx_uuid =       '0000FFF1-0000-1000-8000-00805F9B34FB';
 
