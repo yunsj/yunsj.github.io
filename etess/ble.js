@@ -10,8 +10,10 @@ let deviceSerial = document.querySelector('#deviceSerial');
 let copyButton = document.querySelector('#copySerial');
 
 
-let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
-let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
+let service_uuid = '0000FFF0-0000-1000-8000-00805F9B34FB';
+let tx_uuid = '0000FFF2-0000-1000-8000-00805F9B34FB';
+
+
 //let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
 //let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
 
