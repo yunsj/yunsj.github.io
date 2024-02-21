@@ -10,12 +10,12 @@ let deviceSerial = document.querySelector('#deviceSerial');
 let copyButton = document.querySelector('#copySerial');
 
 
-let service_uuid = '00002902-0000-1000-8000-00805f9b34fb';
-let tx_uuid = '00002902-0000-1000-8000-00805f9b34fb';
+//let service_uuid = '00002902-0000-1000-8000-00805f9b34fb';
+//let tx_uuid = '00002902-0000-1000-8000-00805f9b34fb';
 
 
-//let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
-//let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
+let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
+let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
 
 let optionalServices = [service_uuid];
 let filters = [{namePrefix: 'Cwash'}];
