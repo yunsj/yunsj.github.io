@@ -12,6 +12,8 @@ let copyButton = document.querySelector('#copySerial');
 
 let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
 let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
+//let service_uuid = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
+//let tx_uuid = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
 
 let optionalServices = [service_uuid];
 let filters = [{namePrefix: 'Cwash'}];
