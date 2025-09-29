@@ -87,7 +87,7 @@ async function handleNotifications(event){
 
   switch (value.getUint8(0)){
     case 0xAA: //transfer mode
-    textAlert.textContent += "mode: " + (value.getUint8(1)==1);
+      textAlert.textContent += "mode: " + (value.getUint8(1)==1);
       if (value.getUint8(1) == 1)
       {
         for (let x = 0; x < fileParts; x++){
@@ -97,11 +97,10 @@ async function handleNotifications(event){
           await sendPart(x);
         }
       } else {
-      //  await sendPart(0);
-        await sendPart(next);
+        await sendPart(0);
       }
-
-    break;
+      break;
+      
     case 0xF1: //next part
       var next = value.getUint8(1)*256 + value.getUint8(2);
       let pr = Math.trunc((next/fileParts)*100) + '%';
@@ -115,14 +114,14 @@ async function handleNotifications(event){
         progressBar.innerText = '100%';
       }
       await sendPart(next);
-    break;
-    case 0xF2: //complete, installing firmware
+      break;
       
+    case 0xF2: //complete, installing firmware
       progressBar.style.width = '100%';
       progressBar.innerText = '100%';
-      
       textAlert.textContent = 'Transfer Complete';
-    break;
+      break;
+      
     case 0x0F: //ota result
     const result = new TextDecoder().decode(value);
       logs.innerText += result;
