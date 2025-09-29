@@ -112,7 +112,7 @@ async function handleNotifications(event){
         progressBar.style.width = '100%';
         progressBar.innerText = '100%';
       }
-      await sendPart(next+1);
+      await sendPart(next);
     break;
     case 0xF2: //complete, installing firmware
       
