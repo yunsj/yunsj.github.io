@@ -101,7 +101,7 @@ async function handleNotifications(event){
 
     break;
     case 0xF1: //next part
-      var next = value.getUint8(1)*256 + value.getUint8(2);
+      var next = value.getUint8(1)*256 + value.getUint8(2) + 1;
       let pr = Math.trunc((next/fileParts)*100) + '%';
 
       if ((next/fileParts) < 0.97) {
