@@ -87,7 +87,7 @@ async function handleNotifications(event){
 
   switch (value.getUint8(0)){
     case 0xAA: //transfer mode
-    textAlert.textContent += "mode: " + (value.getUint8(1)==1);
+    textAlert.textContent += " mode: " + (value.getUint8(1)==1);
       if (value.getUint8(1) == 1){
         for (let x = 0; x < fileParts; x++){
           let pr = Math.trunc((x/fileParts)*100) + '%';
@@ -96,7 +96,7 @@ async function handleNotifications(event){
           await sendPart(x);
         }
       } else {
-        await sendPart(0);
+        //await sendPart(0);
       }
 
     break;
