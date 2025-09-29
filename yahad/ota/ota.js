@@ -89,19 +89,19 @@ async function handleNotifications(event){
     case 0xAA: //transfer mode
     textAlert.textContent += " mode: " + (value.getUint8(1)==1);
       if (value.getUint8(1) == 1){
-        // for (let x = 0; x < fileParts; x++){
-        //   let pr = Math.trunc((x/fileParts)*100) + '%';
-        //   progressBar.style.width = pr;
-        //   progressBar.innerText = pr;
-        //   await sendPart(x);
-        // }
+        for (let x = 0; x < fileParts; x++){
+          let pr = Math.trunc((x/fileParts)*100) + '%';
+          progressBar.style.width = pr;
+          progressBar.innerText = pr;
+          await sendPart(x);
+        }
       } else {
         await sendPart(0);
       }
 
     break;
     case 0xF1: //next part
-      var next = value.getUint8(1)*256 + value.getUint8(2) + 1;
+      var next = value.getUint8(1)*256 + value.getUint8(2);
       let pr = Math.trunc((next/fileParts)*100) + '%';
 
       if ((next/fileParts) < 0.97) {
@@ -112,7 +112,7 @@ async function handleNotifications(event){
         progressBar.style.width = '100%';
         progressBar.innerText = '100%';
       }
-      await sendPart(next);
+      await sendPart(next+1);
     break;
     case 0xF2: //complete, installing firmware
       
