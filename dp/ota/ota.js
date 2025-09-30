@@ -16,8 +16,10 @@ let progressBar = document.querySelector('#progressBar');
 const service_uuid = '0000fff0-0000-1000-8000-00805f9b34fb';
 const tx_uuid      = '0000fff2-0000-1000-8000-00805f9b34fb';
 const rx_uuid      = '0000fff1-0000-1000-8000-00805f9b34fb';
-const PART = 16000;
-//const PART = 16384;
+// const PART = 16000;
+// //const PART = 16384;
+// const MTU = 500;
+const PART = 8192;
 const MTU = 256;
 
 var otaRX, otaTX;
